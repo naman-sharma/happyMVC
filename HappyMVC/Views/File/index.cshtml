@@ -1,0 +1,20 @@
+﻿@model string[] /*because you're passing a string array from the fileController */
+
+<ul>
+    @{ 
+        foreach(var file in Model) /*Capital M here lowercase above */
+        {
+            var result = Path.GetFileName(file);
+           <li>@Html.ActionLink(result,"Content", new { file = file })</li> 
+       
+        }
+    }
+
+</ul>
+
+
+
+
+
+
+
